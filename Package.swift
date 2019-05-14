@@ -10,8 +10,7 @@ let package = Package(
     targets: [
         .target(
             name: "StoreScrollIndicator",
-            path: "StoreScrollIndicator",
-            sources: ["ScrollIndicatorView.swift", "StackedIndicatorView.swift"]
+            path: "StoreScrollIndicator/StoreScrollIndicator-iOS"
         )
     ]
 )
