@@ -12,9 +12,38 @@
 		3443A6441DAD2BEF008BDF7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3443A6421DAD2BEF008BDF7C /* Main.storyboard */; };
 		3443A6461DAD2BEF008BDF7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3443A6451DAD2BEF008BDF7C /* Assets.xcassets */; };
 		3443A6491DAD2BEF008BDF7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3443A6471DAD2BEF008BDF7C /* LaunchScreen.storyboard */; };
-		3443A6551DAE8050008BDF7C /* ScrollIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3443A6541DAE8050008BDF7C /* ScrollIndicatorView.swift */; };
-		3498E7C11DCB77DB00843794 /* StackedIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3498E7C01DCB77DB00843794 /* StackedIndicatorView.swift */; };
+		8258131E228AEA3C00A957A7 /* StoreScrollIndicator_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 8258130E228AEA3C00A957A7 /* StoreScrollIndicator_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		82581321228AEA3C00A957A7 /* StoreScrollIndicator_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8258130C228AEA3C00A957A7 /* StoreScrollIndicator_iOS.framework */; };
+		82581322228AEA3C00A957A7 /* StoreScrollIndicator_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8258130C228AEA3C00A957A7 /* StoreScrollIndicator_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8258132A228AEA5D00A957A7 /* ScrollIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3443A6541DAE8050008BDF7C /* ScrollIndicatorView.swift */; };
+		8258132B228AEA5D00A957A7 /* StackedIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3498E7C01DCB77DB00843794 /* StackedIndicatorView.swift */; };
+		8258132C228AEA7D00A957A7 /* ScrollIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3443A6541DAE8050008BDF7C /* ScrollIndicatorView.swift */; };
+		8258132D228AEA7D00A957A7 /* StackedIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3498E7C01DCB77DB00843794 /* StackedIndicatorView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8258131F228AEA3C00A957A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3443A6331DAD2BEF008BDF7C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8258130B228AEA3C00A957A7;
+			remoteInfo = "StoreScrollIndicator-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		82581326228AEA3C00A957A7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				82581322228AEA3C00A957A7 /* StoreScrollIndicator_iOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3443A63B1DAD2BEF008BDF7C /* StoreScrollIndicator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreScrollIndicator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,10 +55,21 @@
 		3443A64A1DAD2BEF008BDF7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3443A6541DAE8050008BDF7C /* ScrollIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollIndicatorView.swift; sourceTree = "<group>"; };
 		3498E7C01DCB77DB00843794 /* StackedIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackedIndicatorView.swift; sourceTree = "<group>"; };
+		8258130C228AEA3C00A957A7 /* StoreScrollIndicator_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StoreScrollIndicator_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8258130E228AEA3C00A957A7 /* StoreScrollIndicator_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoreScrollIndicator_iOS.h; sourceTree = "<group>"; };
+		8258130F228AEA3C00A957A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3443A6381DAD2BEF008BDF7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82581321228AEA3C00A957A7 /* StoreScrollIndicator_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82581309228AEA3C00A957A7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,8 +82,7 @@
 		3443A6321DAD2BEF008BDF7C = {
 			isa = PBXGroup;
 			children = (
-				3443A6541DAE8050008BDF7C /* ScrollIndicatorView.swift */,
-				3498E7C01DCB77DB00843794 /* StackedIndicatorView.swift */,
+				8258130D228AEA3C00A957A7 /* StoreScrollIndicator-iOS */,
 				3443A63D1DAD2BEF008BDF7C /* ProjectFiles */,
 				3443A63C1DAD2BEF008BDF7C /* Products */,
 			);
@@ -53,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				3443A63B1DAD2BEF008BDF7C /* StoreScrollIndicator.app */,
+				8258130C228AEA3C00A957A7 /* StoreScrollIndicator_iOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,7 +110,29 @@
 			path = ProjectFiles;
 			sourceTree = "<group>";
 		};
+		8258130D228AEA3C00A957A7 /* StoreScrollIndicator-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3443A6541DAE8050008BDF7C /* ScrollIndicatorView.swift */,
+				3498E7C01DCB77DB00843794 /* StackedIndicatorView.swift */,
+				8258130E228AEA3C00A957A7 /* StoreScrollIndicator_iOS.h */,
+				8258130F228AEA3C00A957A7 /* Info.plist */,
+			);
+			path = "StoreScrollIndicator-iOS";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		82581307228AEA3C00A957A7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8258131E228AEA3C00A957A7 /* StoreScrollIndicator_iOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		3443A63A1DAD2BEF008BDF7C /* StoreScrollIndicator */ = {
@@ -80,15 +142,35 @@
 				3443A6371DAD2BEF008BDF7C /* Sources */,
 				3443A6381DAD2BEF008BDF7C /* Frameworks */,
 				3443A6391DAD2BEF008BDF7C /* Resources */,
+				82581326228AEA3C00A957A7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				82581320228AEA3C00A957A7 /* PBXTargetDependency */,
 			);
 			name = StoreScrollIndicator;
 			productName = StoreScrollIndicator;
 			productReference = 3443A63B1DAD2BEF008BDF7C /* StoreScrollIndicator.app */;
 			productType = "com.apple.product-type.application";
+		};
+		8258130B228AEA3C00A957A7 /* StoreScrollIndicator-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82581323228AEA3C00A957A7 /* Build configuration list for PBXNativeTarget "StoreScrollIndicator-iOS" */;
+			buildPhases = (
+				82581307228AEA3C00A957A7 /* Headers */,
+				82581308228AEA3C00A957A7 /* Sources */,
+				82581309228AEA3C00A957A7 /* Frameworks */,
+				8258130A228AEA3C00A957A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "StoreScrollIndicator-iOS";
+			productName = "StoreScrollIndicator-iOS";
+			productReference = 8258130C228AEA3C00A957A7 /* StoreScrollIndicator_iOS.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -96,7 +178,7 @@
 		3443A6331DAD2BEF008BDF7C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0800;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = usagimaru;
 				TargetAttributes = {
@@ -104,6 +186,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = R6RZ6S2FLK;
 						LastSwiftMigration = 1020;
+						ProvisioningStyle = Automatic;
+					};
+					8258130B228AEA3C00A957A7 = {
+						CreatedOnToolsVersion = 10.2.1;
+						DevelopmentTeam = R6RZ6S2FLK;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -122,6 +209,7 @@
 			projectRoot = "";
 			targets = (
 				3443A63A1DAD2BEF008BDF7C /* StoreScrollIndicator */,
+				8258130B228AEA3C00A957A7 /* StoreScrollIndicator-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -137,6 +225,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8258130A228AEA3C00A957A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -144,14 +239,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3498E7C11DCB77DB00843794 /* StackedIndicatorView.swift in Sources */,
-				3443A6551DAE8050008BDF7C /* ScrollIndicatorView.swift in Sources */,
+				8258132D228AEA7D00A957A7 /* StackedIndicatorView.swift in Sources */,
+				8258132C228AEA7D00A957A7 /* ScrollIndicatorView.swift in Sources */,
 				3443A6411DAD2BEF008BDF7C /* ViewController.swift in Sources */,
 				3443A63F1DAD2BEF008BDF7C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		82581308228AEA3C00A957A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8258132B228AEA5D00A957A7 /* StackedIndicatorView.swift in Sources */,
+				8258132A228AEA5D00A957A7 /* ScrollIndicatorView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		82581320228AEA3C00A957A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8258130B228AEA3C00A957A7 /* StoreScrollIndicator-iOS */;
+			targetProxy = 8258131F228AEA3C00A957A7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3443A6421DAD2BEF008BDF7C /* Main.storyboard */ = {
@@ -287,7 +399,9 @@
 		3443A64E1DAD2BEF008BDF7C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = R6RZ6S2FLK;
 				INFOPLIST_FILE = "$(SRCROOT)/ProjectFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
@@ -301,7 +415,9 @@
 		3443A64F1DAD2BEF008BDF7C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = R6RZ6S2FLK;
 				INFOPLIST_FILE = "$(SRCROOT)/ProjectFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
@@ -309,6 +425,69 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.interactionmania.StoreScrollIndicator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		82581324228AEA3C00A957A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = R6RZ6S2FLK;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "StoreScrollIndicator-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jamitlabs.StoreScrollIndicator-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		82581325228AEA3C00A957A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = R6RZ6S2FLK;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "StoreScrollIndicator-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jamitlabs.StoreScrollIndicator-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -329,6 +508,15 @@
 			buildConfigurations = (
 				3443A64E1DAD2BEF008BDF7C /* Debug */,
 				3443A64F1DAD2BEF008BDF7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		82581323228AEA3C00A957A7 /* Build configuration list for PBXNativeTarget "StoreScrollIndicator-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82581324228AEA3C00A957A7 /* Debug */,
+				82581325228AEA3C00A957A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
