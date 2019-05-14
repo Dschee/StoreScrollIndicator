@@ -10,15 +10,15 @@ import UIKit
 // Original Background Color: #D8D8D8
 // Original Indicator Color: #525252
 
-protocol ScrollIndicatorViewDelegate: AnyObject {
+public protocol ScrollIndicatorViewDelegate: AnyObject {
 	
 	func scrollIndicatorViewDidComplete(sender: ScrollIndicatorView)
 	
 }
 
-class ScrollIndicatorView: UIView {
+public class ScrollIndicatorView: UIView {
 	
-	enum ScrollIndicatorStyle: Int {
+	public enum ScrollIndicatorStyle: Int {
 		case marker
 		case progress
 		case autoProgress
@@ -35,16 +35,16 @@ class ScrollIndicatorView: UIView {
 	private weak var timer: Timer?
 	private var animating: Bool = false
 	
-	var numberOfPages: UInt = 0
-	var timerDuration: CGFloat = 1.0
-	var style: ScrollIndicatorStyle = .marker
-	@IBInspectable var indicatorColor: UIColor! = #colorLiteral(red: 0.3234693706, green: 0.3234777451, blue: 0.3234732151, alpha: 1) {
+	public var numberOfPages: UInt = 0
+	public var timerDuration: CGFloat = 1.0
+	public var style: ScrollIndicatorStyle = .marker
+	@IBInspectable public var indicatorColor: UIColor! = #colorLiteral(red: 0.3234693706, green: 0.3234777451, blue: 0.3234732151, alpha: 1) {
 		didSet {
 			self.indicator.backgroundColor = indicatorColor
 		}
 	}
 	
-	weak var delegate: ScrollIndicatorViewDelegate?
+	public weak var delegate: ScrollIndicatorViewDelegate?
 	
 	
     override init(frame: CGRect) {
@@ -70,7 +70,7 @@ class ScrollIndicatorView: UIView {
 	
 	// MARK: -
 	
-	override func layoutSubviews() {
+	override public func layoutSubviews() {
 		super.layoutSubviews()
 		
 		if layer.cornerRadius != frame.height / 2 {
@@ -114,11 +114,11 @@ class ScrollIndicatorView: UIView {
 		}
 	}
 	
-	func scrollToOffsetOf(scrollView: UIScrollView) {
+	public func scrollToOffsetOf(scrollView: UIScrollView) {
 		scrollTo(pageOffset: scrollView.contentOffset.x, pageWidth: scrollView.frame.width)
 	}
 	
-	func fadeIn() {
+	public func fadeIn() {
 		if self.fadingIn {return}
 		
 		self.fadingIn = true
@@ -134,7 +134,7 @@ class ScrollIndicatorView: UIView {
 		})
 	}
 	
-	func fadeOut() {
+	public func fadeOut() {
 		if self.fadingOut {return}
 		
 		self.fadingOut = true
@@ -150,7 +150,7 @@ class ScrollIndicatorView: UIView {
 		})
 	}
 	
-	func startTimer() {
+	public func startTimer() {
 		if self.timer != nil || self.style != .autoProgress || (self.style == .autoProgress && self.pageValue == frame.width) {
 			return
 		}
@@ -165,7 +165,7 @@ class ScrollIndicatorView: UIView {
 		RunLoop.current.add(self.timer!, forMode: .common)
 	}
 	
-	func stopTimer() {
+	public func stopTimer() {
 		if style != .autoProgress {
 			return
 		}
@@ -175,14 +175,14 @@ class ScrollIndicatorView: UIView {
 		self.animating = false
 	}
 	
-	func reset() {
+	public func reset() {
 		self.timer?.invalidate()
 		self.timer = nil
 		self.animating = false
 		self.pageValue = 0
 	}
 	
-	@objc func timerAction(sender: Timer) {
+	@objc public func timerAction(sender: Timer) {
 		if self.timerDuration <= 0.0 || !self.animating {
 			stopTimer()
 			return
@@ -201,7 +201,7 @@ class ScrollIndicatorView: UIView {
 
 extension ScrollIndicatorView: UIScrollViewDelegate {
 	
-	func scrollViewDidScroll(_ scrollView: UIScrollView){
+    public func scrollViewDidScroll(_ scrollView: UIScrollView){
 		scrollToOffsetOf(scrollView: scrollView)
 		
 		if scrollView.isTracking || scrollView.isDragging {
@@ -209,15 +209,15 @@ extension ScrollIndicatorView: UIScrollViewDelegate {
 		}
 	}
 	
-	func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+    public func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
 		fadeOut()
 	}
 	
-	func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
 		fadeOut()
 	}
 	
-	func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+    public func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
 		fadeOut()
 	}
 	

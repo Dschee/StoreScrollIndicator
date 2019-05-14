@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol StackedIndicatorViewDelegate: AnyObject {
+public protocol StackedIndicatorViewDelegate: AnyObject {
 	
 	func stackedIndicator(view: StackedIndicatorView, didComplete indicator: ScrollIndicatorView, at index: Int)
 	func stackedIndicator(view: StackedIndicatorView, shouldStartNext indicator: ScrollIndicatorView, at index: Int) -> Bool
@@ -15,12 +15,12 @@ protocol StackedIndicatorViewDelegate: AnyObject {
 	
 }
 
-class StackedIndicatorView: UIView {
+public class StackedIndicatorView: UIView {
 	
 	private var stackView = UIStackView()
-	fileprivate(set) var indicators = [ScrollIndicatorView]()
+	fileprivate(set) public var indicators = [ScrollIndicatorView]()
 	
-	var spacing: CGFloat {
+	public var spacing: CGFloat {
 		get {
 			return self.stackView.spacing
 		}
@@ -29,15 +29,15 @@ class StackedIndicatorView: UIView {
 		}
 	}
 	
-	var numberOfIndicators: UInt = 1 {
+	public var numberOfIndicators: UInt = 1 {
 		didSet {
 			setIndicators()
 		}
 	}
 	
-	var resetTimerWhenCompleted: Bool = false
+	public var resetTimerWhenCompleted: Bool = false
 	
-	weak var delegate: StackedIndicatorViewDelegate?
+	public weak var delegate: StackedIndicatorViewDelegate?
 	
 	
 	override init(frame: CGRect) {
@@ -87,13 +87,13 @@ class StackedIndicatorView: UIView {
 		}
 	}
 	
-	func setTimerDuration(duration: CGFloat) {
+	public func setTimerDuration(duration: CGFloat) {
 		for indicator in self.indicators {
 			indicator.timerDuration = duration
 		}
 	}
 	
-	func start() {
+	public func start() {
 		if let firstIndicator = self.indicators.first {
 			if self.delegate?.stackedIndicator(view: self, shouldStartNext: firstIndicator, at: 0) ?? true {
 				firstIndicator.startTimer()
@@ -101,7 +101,7 @@ class StackedIndicatorView: UIView {
 		}
 	}
 	
-	func reset() {
+	public func reset() {
 		for indicator in self.indicators {
 			indicator.reset()
 		}
@@ -111,12 +111,12 @@ class StackedIndicatorView: UIView {
 
 extension StackedIndicatorView: ScrollIndicatorViewDelegate {
 	
-	func scrollIndicatorViewDidComplete(sender: ScrollIndicatorView){
+	public func scrollIndicatorViewDidComplete(sender: ScrollIndicatorView){
 		if !self.indicators.contains(sender) {
 			return
 		}
 		
-		if let index = self.indicators.index(of: sender) {
+		if let index = self.indicators.firstIndex(of: sender) {
 			if index < self.indicators.count - 1 {
 				self.delegate?.stackedIndicator(view: self, didComplete: self.indicators[index], at: index)
 				
